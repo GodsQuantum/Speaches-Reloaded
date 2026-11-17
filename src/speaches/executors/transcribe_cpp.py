@@ -220,12 +220,23 @@ class TranscribeCppDiarizationModelManager(BaseModelManager):
         import transcribe_cpp  # pyrefly: ignore[missing-import]
 
         with self.load_model(model_id) as model:
-            option_type = getattr(transcribe_cpp, "SortformerStreamOptions", None)
-            if option_type is None:
-                raise RuntimeError("Installed transcribe.cpp lacks SortformerStreamOptions")
-            family = option_type(preset="very_high_latency")
-            with model.session() as session:
-                return session.run(audio.data, timestamps="none", family=family)
+            # Current transcribe-cpp exposes a dedicated diarization role.
+            # Preserve compatibility with older ASR-session bindings.
+            option_type = getattr(transcribe_cpp, "SortformerDiarizeOptions", None)
+            if option_type is not None and hasattr(model, "diarize_session"):
+                with model.diarize_session() as session:
+                    segments = session.run(audio.data, family=option_type(preset="very_high_latency"))
+                return SimpleNamespace(speaker_segments=tuple(segments))
+
+            legacy_options = getattr(transcribe_cpp, "SortformerStreamOptions", None)
+            if legacy_options is not None:
+                with model.session() as session:
+                    return session.run(
+                        audio.data,
+                        timestamps="none",
+                        family=legacy_options(preset="very_high_latency"),
+                    )
+            raise RuntimeError("Installed transcribe.cpp lacks a supported Sortformer diarization API")
 
 
 class TranscribeCppModelManager(BaseModelManager):
