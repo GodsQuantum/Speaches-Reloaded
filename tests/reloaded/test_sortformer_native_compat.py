@@ -30,9 +30,7 @@ def test_current_sortformer_diarization_api(monkeypatch: pytest.MonkeyPatch) -> 
         calls.append((audio, family))
         return turns
 
-    model = SimpleNamespace(
-        diarize_session=lambda: nullcontext(SimpleNamespace(run=run))
-    )
+    model = SimpleNamespace(diarize_session=lambda: nullcontext(SimpleNamespace(run=run)))
     manager, audio = _setup(monkeypatch, binding, model)
     result = manager.diarize("model", audio)
 
