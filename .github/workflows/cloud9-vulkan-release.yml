@@ -29,6 +29,22 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # Candidate tags are commit-scoped and must not modify latest-vulkan.
+      # Match promote-tested-vulkan's existing sha-XXXXXXX-vulkan format.
+      - uses: docker/metadata-action@v6.2.0
+        id: meta
+        with:
+          images: ghcr.io/godsquantum/speaches-reloaded
+          tags: |
+            type=sha,suffix=-vulkan
+      - name: Protect existing candidate tag against overwrite
+        env:
+          CANDIDATE_TAG: ${{ steps.meta.outputs.version }}
+        run: |
+          if docker buildx imagetools inspect "ghcr.io/godsquantum/speaches-reloaded:${CANDIDATE_TAG}" >/dev/null 2>&1; then
+            echo "Refusing to overwrite existing candidate ${CANDIDATE_TAG}" >&2
+            exit 1
+          fi
       - name: Build and publish isolated Vulkan image
         uses: docker/build-push-action@v7.4.0
         with:
@@ -41,6 +57,6 @@ jobs:
             BASE_IMAGE=ubuntu:24.04
             TRANSCRIBE_BUILDER_IMAGE=ubuntu:24.04
             TRANSCRIBE_REF=f1dcd15858c4bbba87ca97862b4e448b2cf15b8f
-          tags: ghcr.io/godsquantum/speaches-reloaded:cloud9-0.4.0-350bcc2-vulkan
+          tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=gha,scope=vulkan
           cache-to: type=gha,mode=max,scope=vulkan
