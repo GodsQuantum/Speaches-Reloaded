@@ -11,7 +11,9 @@ import pytest
 from speaches.executors.transcribe_cpp import TranscribeCppDiarizationModelManager
 
 
-def _setup(monkeypatch: pytest.MonkeyPatch, binding: ModuleType, model: object):
+def _setup(
+    monkeypatch: pytest.MonkeyPatch, binding: ModuleType, model: object
+) -> tuple[TranscribeCppDiarizationModelManager, SimpleNamespace]:
     monkeypatch.setitem(sys.modules, "transcribe_cpp", binding)
     manager = TranscribeCppDiarizationModelManager(ttl=20)
     monkeypatch.setattr(manager, "load_model", lambda _id: nullcontext(model))
@@ -24,7 +26,7 @@ def test_current_sortformer_diarization_api(monkeypatch: pytest.MonkeyPatch) -> 
     binding = ModuleType("transcribe_cpp")
     binding.SortformerDiarizeOptions = lambda preset: ("new", preset)
 
-    def run(audio, *, family):
+    def run(audio: object, *, family: object) -> list[SimpleNamespace]:
         calls.append((audio, family))
         return turns
 
@@ -44,7 +46,7 @@ def test_legacy_sortformer_api_still_supported(monkeypatch: pytest.MonkeyPatch) 
     binding.SortformerStreamOptions = lambda preset: ("old", preset)
     expected = SimpleNamespace(speaker_segments=["legacy"])
 
-    def run(audio, *, timestamps, family):
+    def run(audio: object, *, timestamps: str, family: object) -> SimpleNamespace:
         calls.append((audio, timestamps, family))
         return expected
 
