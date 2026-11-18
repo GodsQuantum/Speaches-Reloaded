@@ -1,0 +1,796 @@
+{
+  "dataset": "google/fleurs",
+  "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "subset": "fr_fr/test",
+  "source_tsv_sha256": "5d06d338b242e00786fcf12c4c92008b9f399d5a5c872c91dca90572e7869c0d",
+  "source_audio_sha256": "d23690e102f373554d1b544cd2ff1e76e4fedeb04953c0b72751a1b7c518cfdd",
+  "samples": [
+    {
+      "sentence_id": "1684",
+      "filename": "2635745390982738628.wav",
+      "reference_original": "Apia est la capitale des Samoa. La ville se trouve sur l'île d'Upolu et compte un peu moins de 40 000 habitants.",
+      "reference_normalized": "apia est la capitale des samoa la ville se trouve sur l'île d'upolu et compte un peu moins de 40 000 habitants",
+      "duration_nominal": 10.8,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1685",
+      "filename": "10451502537136425109.wav",
+      "reference_original": "Par exemple, le format de photographie le plus courant au monde est le 35 mm ; c'était le format de pellicule le plus répandu à la fin de l'ère des films analogiques.",
+      "reference_normalized": "par exemple le format de photographie le plus courant au monde est le 35 mm c'était le format de pellicule le plus répandu à la fin de l'ère des films analogiques",
+      "duration_nominal": 8.1,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1740",
+      "filename": "9984922725503397568.wav",
+      "reference_original": "Le spectacle son et lumière à la pyramide constitue l'une des attractions les plus intéressantes de la région pour les enfants.",
+      "reference_normalized": "le spectacle son et lumière à la pyramide constitue l'une des attractions les plus intéressantes de la région pour les enfants",
+      "duration_nominal": 11.28,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1772",
+      "filename": "13215458268584779067.wav",
+      "reference_original": "Il est donc probable que la notation a été ajoutée simplement comme une étiquette.",
+      "reference_normalized": "il est donc probable que la notation a été ajoutée simplement comme une étiquette",
+      "duration_nominal": 8.52,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1849",
+      "filename": "15510536844300476299.wav",
+      "reference_original": "Si vous avez vu le film Benjamin Gates et le Trésor des Templiers, vous pensez peut-être qu'une carte au trésor a été dessinée au dos de la Déclaration d'indépendance.",
+      "reference_normalized": "si vous avez vu le film benjamin gates et le trésor des templiers vous pensez peut-être qu'une carte au trésor a été dessinée au dos de la déclaration d'indépendance",
+      "duration_nominal": 8.52,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1888",
+      "filename": "842143291075899314.wav",
+      "reference_original": "Le choc de réinsertion se produit plus tôt que le choc culturel (la phase de lune de miel est moins longue), dure plus longtemps et peut être plus grave.",
+      "reference_normalized": "le choc de réinsertion se produit plus tôt que le choc culturel la phase de lune de miel est moins longue dure plus longtemps et peut être plus grave",
+      "duration_nominal": 9.54,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1893",
+      "filename": "11962196321446720509.wav",
+      "reference_original": "Les Sundarbans sont la plus grande ceinture de mangroves côtières du monde, s’étendant sur 80 km (50 miles) depuis la côte jusqu’à l’arrière-pays bangladais et indien.",
+      "reference_normalized": "les sundarbans sont la plus grande ceinture de mangroves côtières du monde s’étendant sur 80 km 50 miles depuis la côte jusqu’à l’arrière-pays bangladais et indien",
+      "duration_nominal": 13.8,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1916",
+      "filename": "12853298508770593283.wav",
+      "reference_original": "De nombreux produits de boulangerie allemands contiennent également des amandes, des noisettes et d’autres noix. Les gâteaux populaires se marient souvent particulièrement bien avec une tasse de café serré.",
+      "reference_normalized": "de nombreux produits de boulangerie allemands contiennent également des amandes des noisettes et d'autres noix les gâteaux populaires se marient souvent particulièrement bien avec une tasse de café serré",
+      "duration_nominal": 9.0,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1926",
+      "filename": "17810850355374913939.wav",
+      "reference_original": "Les opinions d'Aristote sur toutes les questions scientifiques, y compris la psychologie, ont été acceptées.",
+      "reference_normalized": "les opinions d'aristote sur toutes les questions scientifiques y compris la psychologie ont été acceptées",
+      "duration_nominal": 5.88,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1942",
+      "filename": "18151681871637167427.wav",
+      "reference_original": "Nous fabriquons nos maisons et nos vêtements à base de plantes. La plupart des aliments que nous mangeons sont des plantes. Sans les plantes, les animaux ne survivraient pas.",
+      "reference_normalized": "nous fabriquons nos maisons et nos vêtements à base de plantes la plupart des aliments que nous mangeons sont des plantes sans les plantes les animaux ne survivraient pas",
+      "duration_nominal": 10.74,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1691",
+      "filename": "14587209160231288861.wav",
+      "reference_original": "Sur certaines routes, les grandes entreprises ont leurs propres avions, mais sur d’autres routes et pour les petites entreprises, il y a eu un problème.",
+      "reference_normalized": "sur certaines routes les grandes entreprises ont leurs propres avions mais sur d'autres routes et pour les petites entreprises il y a eu un problème",
+      "duration_nominal": 13.44,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1694",
+      "filename": "12846303022479810669.wav",
+      "reference_original": "Les enfants sont placés dans des familles d’accueil pour des raisons très diverses qui vont de la négligence à la maltraitance, en passant par l’extorsion.",
+      "reference_normalized": "les enfants sont placés dans des familles d'accueil pour des raisons très diverses qui vont de la négligence à la maltraitance en passant par l'extorsion",
+      "duration_nominal": 8.46,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1711",
+      "filename": "7659681453419536049.wav",
+      "reference_original": "Ces théories examinent ce qui pousse certaines personnes à vouloir les choses qu’elles font et ce qui, dans leur environnement, les pousse à faire ou à ne pas faire certaines choses.",
+      "reference_normalized": "ces théories examinent ce qui pousse certaines personnes à vouloir les choses qu'elles font et ce qui dans leur environnement les pousse à faire ou à ne pas faire certaines choses",
+      "duration_nominal": 14.28,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1764",
+      "filename": "4440239254717438038.wav",
+      "reference_original": "En raison du nombre important de personnes présentes, il n'a pas été possible pour tout le monde d'assister aux funérailles sur la place Saint-Pierre.",
+      "reference_normalized": "en raison du nombre important de personnes présentes il n'a pas été possible pour tout le monde d'assister aux funérailles sur la place saint-pierre",
+      "duration_nominal": 8.1,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1780",
+      "filename": "14112006910306217287.wav",
+      "reference_original": "Avec le Kundalini Yoga, l’énergie Kundalini (énergie d’illumination) est éveillée par des postures de yoga, des exercices de respiration, des mantras et des visualisations.",
+      "reference_normalized": "avec le kundalini yoga l’énergie kundalini énergie d’illumination est éveillée par des postures de yoga des exercices de respiration des mantras et des visualisations",
+      "duration_nominal": 12.9,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1908",
+      "filename": "7672015740007656557.wav",
+      "reference_original": "Il s'agit d'un excellent moyen de faire la distinction entre certains verbes et objets.",
+      "reference_normalized": "il s'agit d'un excellent moyen de faire la distinction entre certains verbes et objets",
+      "duration_nominal": 5.04,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1950",
+      "filename": "13821472517111137510.wav",
+      "reference_original": "La ville romantique et fascinante de Sintra, située au nord, est facilement accessible et a été rendue célèbre auprès des étrangers par le récit éclatant de sa splendeur qu'en a fait Lord Byron.",
+      "reference_normalized": "la ville romantique et fascinante de sintra située au nord est facilement accessible et a été rendue célèbre auprès des étrangers par le récit éclatant de sa splendeur qu'en a fait lord byron",
+      "duration_nominal": 14.88,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1963",
+      "filename": "3401760301064688692.wav",
+      "reference_original": "En repassant les vêtements humides, on peut les faire sécher plus facilement. De nombreux hôtels disposent d'un fer et d'une planche à repasser qui peuvent être prêtés, même s'il n'y en a pas dans les chambres.",
+      "reference_normalized": "en repassant les vêtements humides on peut les faire sécher plus facilement de nombreux hôtels disposent d'un fer et d'une planche à repasser qui peuvent être prêtés même s'il n'y en a pas dans les chambres",
+      "duration_nominal": 13.62,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1975",
+      "filename": "14361567643536061453.wav",
+      "reference_original": "Le Vatican compte environ 800 habitants. C'est le plus petit pays indépendant au monde, et le moins peuplé.",
+      "reference_normalized": "le vatican compte environ 800 habitants c'est le plus petit pays indépendant au monde et le moins peuplé",
+      "duration_nominal": 9.36,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1991",
+      "filename": "18362336016314903734.wav",
+      "reference_original": "Pendant cette période de l'histoire européenne, l'Église catholique, qui était devenue riche et puissante, a été remise en question.",
+      "reference_normalized": "pendant cette période de l'histoire européenne l'église catholique qui était devenue riche et puissante a été remise en question",
+      "duration_nominal": 6.96,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1677",
+      "filename": "13279079565064190750.wav",
+      "reference_original": "Aujourd'hui, les seuls insectes qui ne peuvent pas replier leurs ailes sont les mouches dragons et les éphémères.",
+      "reference_normalized": "aujourd'hui les seuls insectes qui ne peuvent pas replier leurs ailes sont les mouches dragons et les éphémères",
+      "duration_nominal": 6.6,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1714",
+      "filename": "11295389174145067264.wav",
+      "reference_original": "Le satellite a été envoyé dans l'espace par une fusée. Les scientifiques utilisent des télescopes dans l'espace parce que l'atmosphère terrestre déforme une partie de notre lumière et de notre vision.",
+      "reference_normalized": "le satellite a été envoyé dans l'espace par une fusée les scientifiques utilisent des télescopes dans l'espace parce que l'atmosphère terrestre déforme une partie de notre lumière et de notre vision",
+      "duration_nominal": 9.78,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1719",
+      "filename": "16058710094189854539.wav",
+      "reference_original": "Le temps violent est le terme générique pour tout phénomène météorologique dangereux susceptible de causer des dommages, de graves bouleversements sociaux ou la perte de vies humaines.",
+      "reference_normalized": "le temps violent est le terme générique pour tout phénomène météorologique dangereux susceptible de causer des dommages de graves bouleversements sociaux ou la perte de vies humaines",
+      "duration_nominal": 9.48,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1721",
+      "filename": "16363899699243522172.wav",
+      "reference_original": "Après la construction du barrage en 1963, les inondations saisonnières qui devaient répandre des sédiments dans le fleuve ont été stoppées.",
+      "reference_normalized": "après la construction du barrage en 1963 les inondations saisonnières qui devaient répandre des sédiments dans le fleuve ont été stoppées",
+      "duration_nominal": 12.72,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1739",
+      "filename": "4226771475577503451.wav",
+      "reference_original": "Située au sommet d'une des montagnes au nord de La Mecque, la grotte est totalement isolée du reste du monde.",
+      "reference_normalized": "située au sommet d'une des montagnes au nord de la mecque la grotte est totalement isolée du reste du monde",
+      "duration_nominal": 6.36,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1790",
+      "filename": "11868760808794373459.wav",
+      "reference_original": "Son travail est d'une telle qualité et d'un tel niveau de détail qu'il est l'un des rares philatélistes bien connus du « grand public ». Certains collectionneurs consacrent leur attention uniquement à ses œuvres.",
+      "reference_normalized": "son travail est d'une telle qualité et d'un tel niveau de détail qu'il est l'un des rares philatélistes bien connus du « grand public ». certains collectionneurs consacrent leur attention uniquement à ses œuvres",
+      "duration_nominal": 10.26,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1791",
+      "filename": "4572427688458300889.wav",
+      "reference_original": "Ne défigurez pas le site en marquant ou en grattant des graffitis sur les structures.",
+      "reference_normalized": "ne défigurez pas le site en marquant ou en grattant des graffitis sur les structures",
+      "duration_nominal": 4.8,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1797",
+      "filename": "3598665689422649485.wav",
+      "reference_original": "Tout le monde fait partie de la société et utilise les systèmes de transport. Quasiment tout le monde se plaint des systèmes de transport.",
+      "reference_normalized": "tout le monde fait partie de la société et utilise les systèmes de transport quasiment tout le monde se plaint des systèmes de transport",
+      "duration_nominal": 5.52,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1818",
+      "filename": "12804852110924201533.wav",
+      "reference_original": "Les gens n'anticipent peut-être pas que la patience et la compréhension sont aussi nécessaires pour les voyageurs et voyageuses retournant à la maison.",
+      "reference_normalized": "les gens n'anticipent peut-être pas que la patience et la compréhension sont aussi nécessaires pour les voyageurs et voyageuses retournant à la maison",
+      "duration_nominal": 6.6,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1820",
+      "filename": "5831084096944162011.wav",
+      "reference_original": "Les gens écrivent maintenant des messages sur des écrans d'ordinateur, sans jamais avoir à s'approcher d'un taille-crayon.",
+      "reference_normalized": "les gens écrivent maintenant des messages sur des écrans d'ordinateur sans jamais avoir à s'approcher d'un taille-crayon",
+      "duration_nominal": 7.14,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1824",
+      "filename": "854024349176703150.wav",
+      "reference_original": "Le plateau de Gizeh, ou « nécropole de Gizeh », dans la vallée des Morts en Égypte, regroupe plusieurs pyramides (la grande pyramide étant la plus imposante), plusieurs petits tombeaux, de nombreux temples et le grand Sphinx.",
+      "reference_normalized": "le plateau de gizeh ou « nécropole de gizeh » dans la vallée des morts en égypte regroupe plusieurs pyramides la grande pyramide étant la plus imposante plusieurs petits tombeaux de nombreux temples et le grand sphinx",
+      "duration_nominal": 12.24,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1841",
+      "filename": "12271397797191229695.wav",
+      "reference_original": "Au-dessus, on ne peut rien contempler d'autre que le ciel clair et magnifique et les nombreuses montagnes environnantes. Depuis l'intérieur de la grotte, on ne peut voir ou entendre que très peu de choses de cet univers.",
+      "reference_normalized": "au-dessus on ne peut rien contempler d'autre que le ciel clair et magnifique et les nombreuses montagnes environnantes depuis l'intérieur de la grotte on ne peut voir ou entendre que très peu de choses de cet univers",
+      "duration_nominal": 12.84,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1863",
+      "filename": "70025853428893411.wav",
+      "reference_original": "Le centre de la méditation tibétaine est le yoga de la déité. C'est grâce à la visualisation de différentes déités que les canaux d'énergie sont nettoyés, les chakras activés, et la conscience d'éveil créée.",
+      "reference_normalized": "le centre de la méditation tibétaine est le yoga de la déité c'est grâce à la visualisation de différentes déités que les canaux d'énergie sont nettoyés les chakras activés et la conscience d'éveil créée",
+      "duration_nominal": 11.7,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1866",
+      "filename": "118005971910520590.wav",
+      "reference_original": "Premièrement, la plupart des cavaliers portent des bottes d'équitation avec un talon et une semelle lisse et assez étroite.",
+      "reference_normalized": "premièrement la plupart des cavaliers portent des bottes d'équitation avec un talon et une semelle lisse et assez étroite",
+      "duration_nominal": 10.86,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1878",
+      "filename": "7625516577244837392.wav",
+      "reference_original": "L'autorité centrale de l'église était à Rome depuis plus de 1000 ans et cette concentration de pouvoir et d'argent a conduit beaucoup de gens à se demander si cette doctrine était respectée.",
+      "reference_normalized": "l'autorité centrale de l'église était à rome depuis plus de 1000 ans et cette concentration de pouvoir et d'argent a conduit beaucoup de gens à se demander si cette doctrine était respectée",
+      "duration_nominal": 11.58,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1919",
+      "filename": "12304870150060032664.wav",
+      "reference_original": "La ville est également le point de départ pour l'ascension du volcan Nyiragongo ainsi que pour des treks de pistage des gorilles des montagnes parmi les moins chers d'Afrique.",
+      "reference_normalized": "la ville est également le point de départ pour l'ascension du volcan nyiragongo ainsi que pour des treks de pistage des gorilles des montagnes parmi les moins chers d'afrique",
+      "duration_nominal": 8.58,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1946",
+      "filename": "17356681289057930157.wav",
+      "reference_original": "Les politiques d'annulation varient, mais à partir de fin mars, la plupart des politiques d'annulation basées sur les coronavirus ne s'étendent pas jusqu'en juillet 2020, date à laquelle les Jeux olympiques avaient été prévus.",
+      "reference_normalized": "les politiques d'annulation varient mais à partir de fin mars la plupart des politiques d'annulation basées sur les coronavirus ne s'étendent pas jusqu'en juillet 2020 date à laquelle les jeux olympiques avaient été prévus",
+      "duration_nominal": 11.82,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1973",
+      "filename": "16135406137969315305.wav",
+      "reference_original": "Mais, situé dans les « tropiques élevées » à seulement quelques degrés au nord de l'équateur, il faudra vous adapter à la chaleur (toujours) et à un fort rayonnement du soleil (quand le ciel est dégagé, ce qui est plus rare).",
+      "reference_normalized": "mais situé dans les « tropiques élevées » à seulement quelques degrés au nord de l'équateur il faudra vous adapter à la chaleur toujours et à un fort rayonnement du soleil quand le ciel est dégagé ce qui est plus rare",
+      "duration_nominal": 12.0,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1979",
+      "filename": "14878083544049672174.wav",
+      "reference_original": "La monnaie officielle des Îles Malouines est la livre des Îles Malouines (FKP) dont la valeur est équivalente à une livre sterling (GBP).",
+      "reference_normalized": "la monnaie officielle des îles malouines est la livre des îles malouines fkp dont la valeur est équivalente à une livre sterling gbp",
+      "duration_nominal": 14.34,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "2008",
+      "filename": "14348895125714870649.wav",
+      "reference_original": "Parmi les autres sujets à l’ordre du jour à Bali figurent la sauvegarde des dernières forêts du monde et le partage des technologies pour aider les pays en développement à poursuivre leur croissance de manière moins polluante.",
+      "reference_normalized": "parmi les autres sujets à l'ordre du jour à bali figurent la sauvegarde des dernières forêts du monde et le partage des technologies pour aider les pays en développement à poursuivre leur croissance de manière moins polluante",
+      "duration_nominal": 17.76,
+      "gender": "FEMALE"
+    },
+    {
+      "sentence_id": "1663",
+      "filename": "2442077088303431914.wav",
+      "reference_original": "Vallée de Cochamó – La destination d'excellence pour l'escalade au Chili, connue comme le Yosemite d'Amérique du Sud, avec de nombreuses grandes parois et falaises granitiques différentes.",
+      "reference_normalized": "vallée de cochamó – la destination d'excellence pour l'escalade au chili connue comme le yosemite d'amérique du sud avec de nombreuses grandes parois et falaises granitiques différentes",
+      "duration_nominal": 11.82,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1666",
+      "filename": "3565117049425388243.wav",
+      "reference_original": "Vous pouvez également avoir recours aux conseils d'autres gouvernements que le vôtre, mais leurs conseils sont adaptés à leurs citoyens.",
+      "reference_normalized": "vous pouvez également avoir recours aux conseils d'autres gouvernements que le vôtre mais leurs conseils sont adaptés à leurs citoyens",
+      "duration_nominal": 6.42,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1702",
+      "filename": "2550133860513255373.wav",
+      "reference_original": "En à peine deux semaines, les Américains et les Forces de la France Libre avaient libéré le sud de la France et se dirigeaient vers l'Allemagne.",
+      "reference_normalized": "en à peine deux semaines les américains et les forces de la france libre avaient libéré le sud de la france et se dirigeaient vers l'allemagne",
+      "duration_nominal": 7.8,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1725",
+      "filename": "432627388079085935.wav",
+      "reference_original": "L'ASUS Eee PC, lancé précédemment à l'échelle mondiale pour des raisons d'économies et de fonctionnalités, est devenu un sujet brûlant lors du Taipei IT Month de 2007.",
+      "reference_normalized": "l'asus eee pc lancé précédemment à l'échelle mondiale pour des raisons d'économies et de fonctionnalités est devenu un sujet brûlant lors du taipei it month de 2007",
+      "duration_nominal": 11.52,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1749",
+      "filename": "5006611904539449806.wav",
+      "reference_original": "Elle était gouvernée par les Français de Vichy, des Français qui ont fait la paix avec les Allemands en 1940 et ont collaboré avec l'occupant au lieu de l'affronter.",
+      "reference_normalized": "elle était gouvernée par les français de vichy des français qui ont fait la paix avec les allemands en 1940 et ont collaboré avec l'occupant au lieu de l'affronter",
+      "duration_nominal": 9.6,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1750",
+      "filename": "5655563442639696119.wav",
+      "reference_original": "Cette découverte permet également de mieux comprendre l'évolution des plumes chez les oiseaux.",
+      "reference_normalized": "cette découverte permet également de mieux comprendre l'évolution des plumes chez les oiseaux",
+      "duration_nominal": 7.32,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1758",
+      "filename": "8242393670634015978.wav",
+      "reference_original": "L’archipel se trouve à 120 km au nord de la péninsule. L’île du Roi-George, avec le village de Villa Las Estrellas, est la plus grande.",
+      "reference_normalized": "l'archipel se trouve à 120 km au nord de la péninsule l'île du roi-george avec le village de villa las estrellas est la plus grande",
+      "duration_nominal": 8.7,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1766",
+      "filename": "796744033896621691.wav",
+      "reference_original": "Certains atomes ont un noyau instable, de sorte qu'ils ont tendance à se briser avec peu ou pas de pression.",
+      "reference_normalized": "certains atomes ont un noyau instable de sorte qu'ils ont tendance à se briser avec peu ou pas de pression",
+      "duration_nominal": 8.64,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1783",
+      "filename": "4656961419508518690.wav",
+      "reference_original": "Les phénomènes météorologiques extrêmes, régionaux et saisonniers, incluent les tempêtes de froid, les tempêtes de neige avec vents violents, et les tempêtes de sable ou de poussières.",
+      "reference_normalized": "les phénomènes météorologiques extrêmes régionaux et saisonniers incluent les tempêtes de froid les tempêtes de neige avec vents violents et les tempêtes de sable ou de poussières",
+      "duration_nominal": 10.32,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1799",
+      "filename": "122619262747635040.wav",
+      "reference_original": "À part l'événement de mercredi, Carpanedo a participé à deux courses individuelles lors des Championnats.",
+      "reference_normalized": "à part l'événement de mercredi carpanedo a participé à deux courses individuelles lors des championnats",
+      "duration_nominal": 6.42,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1822",
+      "filename": "14540129547604519203.wav",
+      "reference_original": "Le sultan marocain a reconstruit la ville sous le nom de Daru l-Badya, et elle a été rebaptisée Casablanca par les commerçants espagnols qui y ont établi des comptoirs de négoce.",
+      "reference_normalized": "le sultan marocain a reconstruit la ville sous le nom de daru l-badya et elle a été rebaptisée casablanca par les commerçants espagnols qui y ont établi des comptoirs de négoce",
+      "duration_nominal": 11.52,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1830",
+      "filename": "5576235350170118390.wav",
+      "reference_original": "Le parti au pouvoir, l'Organisation du peuple du Sud-Ouest africain (SWAPO), a lui aussi réussi à conserver la majorité aux élections législatives.",
+      "reference_normalized": "le parti au pouvoir l'organisation du peuple du sud-ouest africain swapo a lui aussi réussi à conserver la majorité aux élections législatives",
+      "duration_nominal": 9.96,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1855",
+      "filename": "10496509281839367149.wav",
+      "reference_original": "Les troupes de lions agissent comme des meutes de loups ou de chiens, des animaux étonnamment semblables aux lions (mais pas aux autres grands félins) dans leur comportement, et aussi très mortels pour leurs proies.",
+      "reference_normalized": "les troupes de lions agissent comme des meutes de loups ou de chiens des animaux étonnamment semblables aux lions mais pas aux autres grands félins dans leur comportement et aussi très mortels pour leurs proies",
+      "duration_nominal": 11.64,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1865",
+      "filename": "9235247672928100403.wav",
+      "reference_original": "Les croisières à Saint-Pétersbourg incluent du temps passé dans la ville. Les passagers des croisières sont exemptés de l'obligation de visa (voir les conditions).",
+      "reference_normalized": "les croisières à saint-pétersbourg incluent du temps passé dans la ville. les passagers des croisières sont exemptés de l'obligation de visa voir les conditions",
+      "duration_nominal": 9.6,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1869",
+      "filename": "3851184196755403550.wav",
+      "reference_original": "Ses longues mâchoires étaient dotées de plus de 70 dents acérées comme des lames de rasoir, ainsi que d'une série supplémentaire de dents dans le palais, de sorte que tout ce qui croisait son chemin ne pouvait pas s'échapper.",
+      "reference_normalized": "ses longues mâchoires étaient dotées de plus de 70 dents acérées comme des lames de rasoir ainsi que d'une série supplémentaire de dents dans le palais de sorte que tout ce qui croisait son chemin ne pouvait pas s'échapper",
+      "duration_nominal": 13.38,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1880",
+      "filename": "5566317317232777821.wav",
+      "reference_original": "Ainsi, le crayon était un bon ami pour beaucoup de gens lorsqu’il est sorti.",
+      "reference_normalized": "ainsi le crayon était un bon ami pour beaucoup de gens lorsqu'il est sorti",
+      "duration_nominal": 8.7,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1935",
+      "filename": "16644518222137993170.wav",
+      "reference_original": "Cependant, ce n'est pas vrai. Bien qu'il y ait une inscription au dos du document, ce n'est pas une carte au trésor.",
+      "reference_normalized": "cependant ce n'est pas vrai bien qu'il y ait une inscription au dos du document ce n'est pas une carte au trésor",
+      "duration_nominal": 9.36,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1945",
+      "filename": "14026514896916015089.wav",
+      "reference_original": "Casablanca est l’un des endroits les moins intéressants de tout le Maroc pour faire des achats.",
+      "reference_normalized": "casablanca est l'un des endroits les moins intéressants de tout le maroc pour faire des achats",
+      "duration_nominal": 4.74,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1959",
+      "filename": "2185735266707508578.wav",
+      "reference_original": "Néanmoins, suivez les conseils des autorités, obéissez à tous les panneaux et prêtez une attention particulière aux avertissements de sécurité.",
+      "reference_normalized": "néanmoins suivez les conseils des autorités obéissez à tous les panneaux et prêtez une attention particulière aux avertissements de sécurité",
+      "duration_nominal": 7.2,
+      "gender": "MALE"
+    },
+    {
+      "sentence_id": "1960",
+      "filename": "6350573990637191461.wav",
+      "reference_original": "Selon certaines sources, il aurait une vingtaine d'années. Dans une déclaration, Bieber a déclaré : « Bien que je n'aie pas été présent ni directement impliqué dans ce tragique accident, mes pensées et prières vont à la famille de la victime. »",
+      "reference_normalized": "selon certaines sources il aurait une vingtaine d'années. dans une déclaration bieber a déclaré : « bien que je n'aie pas été présent ni directement impliqué dans ce tragique accident mes pensées et prières vont à la famille de la victime. »",
+      "duration_nominal": 13.86,
+      "gender": "MALE"
+    }
+  ],
+  "files": {
+    "10451502537136425109.wav": {
+      "sha256": "5685abb65ef34861710663e20655cb4d4e4bf4ec58809c04070f45ae14732a0f",
+      "bytes": 518458,
+      "member": "test/10451502537136425109.wav"
+    },
+    "11962196321446720509.wav": {
+      "sha256": "5516a3edce7eb2a5aa3bd9fd896d33b9b26f870fe9ebaba4f24096bc90560773",
+      "bytes": 883258,
+      "member": "test/11962196321446720509.wav"
+    },
+    "12846303022479810669.wav": {
+      "sha256": "fde4d43fa3d2a174fa6b5a6b60ebc95e6d0a31fc3ace59b25380a1a2a22f320c",
+      "bytes": 541498,
+      "member": "test/12846303022479810669.wav"
+    },
+    "12853298508770593283.wav": {
+      "sha256": "a290d8ab48312962be2d8e58812fbd3b8dc1fcccf2306a5177f3db8cfd8fe0fd",
+      "bytes": 576058,
+      "member": "test/12853298508770593283.wav"
+    },
+    "13215458268584779067.wav": {
+      "sha256": "711bf7350bf6029edee2320979f35ace5f6d1262975ad37562eca79fc8677e08",
+      "bytes": 545338,
+      "member": "test/13215458268584779067.wav"
+    },
+    "13821472517111137510.wav": {
+      "sha256": "716002bf200af6dd89cb34fb826ae9234e100b60330d26ee91c6b445d9bd7ea1",
+      "bytes": 952378,
+      "member": "test/13821472517111137510.wav"
+    },
+    "14112006910306217287.wav": {
+      "sha256": "469abf1dc462571d42b27d0200ccc2a9b1871e892d752290dd6687497593cdb5",
+      "bytes": 825658,
+      "member": "test/14112006910306217287.wav"
+    },
+    "14361567643536061453.wav": {
+      "sha256": "a83f34654f97b660910e4763d7088cf2f729374728e12ce2610c30926bf059bb",
+      "bytes": 599098,
+      "member": "test/14361567643536061453.wav"
+    },
+    "14587209160231288861.wav": {
+      "sha256": "e7d506c981305b126fe6f9c8c34980edf63131ae7acb4c055022253dd667279d",
+      "bytes": 860218,
+      "member": "test/14587209160231288861.wav"
+    },
+    "15510536844300476299.wav": {
+      "sha256": "a9e83c3efdc5a85468779ede6ac2c1404dad71b1908714fb1b9cf75f88650b09",
+      "bytes": 545338,
+      "member": "test/15510536844300476299.wav"
+    },
+    "17810850355374913939.wav": {
+      "sha256": "333a2aa842445e6328898ab7a4e0917003b1f439ae8456ba119c009eb6d3ceab",
+      "bytes": 376378,
+      "member": "test/17810850355374913939.wav"
+    },
+    "18151681871637167427.wav": {
+      "sha256": "218bedf8816bfc367c114a8d67dc1d93148beca277e428dcd9cea3c4e2252103",
+      "bytes": 687418,
+      "member": "test/18151681871637167427.wav"
+    },
+    "18362336016314903734.wav": {
+      "sha256": "0945d5ef1282cf6336c4f048e499d41d9570a7b7c125a5493c5722f56f51945e",
+      "bytes": 445498,
+      "member": "test/18362336016314903734.wav"
+    },
+    "2635745390982738628.wav": {
+      "sha256": "47d5305aeef0fdc9fb837d7c006d103a38d78f7e8a61cc1f640eed6ef6c7b9fa",
+      "bytes": 691258,
+      "member": "test/2635745390982738628.wav"
+    },
+    "3401760301064688692.wav": {
+      "sha256": "8067c10047ed4a09037be48af446a779feb4991a7c204c0177a24c1c14497d22",
+      "bytes": 871738,
+      "member": "test/3401760301064688692.wav"
+    },
+    "4440239254717438038.wav": {
+      "sha256": "bdd0c4b9570d4629fb23b7200c31b39f850d688eb06bbb4749827aa6613fb19d",
+      "bytes": 518458,
+      "member": "test/4440239254717438038.wav"
+    },
+    "7659681453419536049.wav": {
+      "sha256": "34a715be091e271190681e3217f9f86fdbf934ce643ed6e20eddf45d016561d2",
+      "bytes": 913978,
+      "member": "test/7659681453419536049.wav"
+    },
+    "7672015740007656557.wav": {
+      "sha256": "911bb94ac60148cb2d3fdb3c2734f2b10f4081ac441c58041af5fa1d2338028c",
+      "bytes": 322618,
+      "member": "test/7672015740007656557.wav"
+    },
+    "842143291075899314.wav": {
+      "sha256": "714f3851762a1a82121690e4277660d9441c7d313e0e1af594cc86793fcaa3a3",
+      "bytes": 610618,
+      "member": "test/842143291075899314.wav"
+    },
+    "9984922725503397568.wav": {
+      "sha256": "3bd5a53c1c015e2c0b50de5136c248f48e8fe7f85d407b3111abddfddfe001c8",
+      "bytes": 721978,
+      "member": "test/9984922725503397568.wav"
+    },
+    "10496509281839367149.wav": {
+      "sha256": "4346f22bf351515ce7be700641bc7e4c16b6f8e9da820c9ee8eca174b803e4cb",
+      "bytes": 745018,
+      "member": "test/10496509281839367149.wav"
+    },
+    "11295389174145067264.wav": {
+      "sha256": "8167d6f635897490d19f63103fa5bc7656f90cedc81445f82e4d433b29128c03",
+      "bytes": 625978,
+      "member": "test/11295389174145067264.wav"
+    },
+    "118005971910520590.wav": {
+      "sha256": "a9f38f8ba2721acc90aede2b3d7a80fdbaf48a16f8d5604b41d00162c43603c7",
+      "bytes": 695098,
+      "member": "test/118005971910520590.wav"
+    },
+    "11868760808794373459.wav": {
+      "sha256": "041b5a3133653bf512592ac5b86c11c8dc1b88ef4162fcc93e739ee83e230ce9",
+      "bytes": 656698,
+      "member": "test/11868760808794373459.wav"
+    },
+    "122619262747635040.wav": {
+      "sha256": "0f023fecbd88b1e782f044947ea4d8574d817bf9fd2149fdf561a37e50acd512",
+      "bytes": 410938,
+      "member": "test/122619262747635040.wav"
+    },
+    "12271397797191229695.wav": {
+      "sha256": "6b3394cb32d403a56736057bf41f27d9d34e9f1d491f69950a9d4f035422deab",
+      "bytes": 821818,
+      "member": "test/12271397797191229695.wav"
+    },
+    "12304870150060032664.wav": {
+      "sha256": "c4ea544011f4693e62159313d8452130e59da710fa332d79808670bd590a43e8",
+      "bytes": 549178,
+      "member": "test/12304870150060032664.wav"
+    },
+    "12804852110924201533.wav": {
+      "sha256": "50db5e371c065cea933ae0a211548a8b29721961cf24c74af8b9871f163c9bf2",
+      "bytes": 422458,
+      "member": "test/12804852110924201533.wav"
+    },
+    "13279079565064190750.wav": {
+      "sha256": "597c05c2aecd593df30380589b73ad175e2ca08b5c3a1656f2bc7aea8e1a812e",
+      "bytes": 422458,
+      "member": "test/13279079565064190750.wav"
+    },
+    "14026514896916015089.wav": {
+      "sha256": "7bc1ae78cd3871575b167a3f96ebd8cd30218d319086da196221328c9c8bd092",
+      "bytes": 303418,
+      "member": "test/14026514896916015089.wav"
+    },
+    "14348895125714870649.wav": {
+      "sha256": "0bbe041d3e8898f9d368e17635eee0beeed840a154dfcb36e370178dcc39be56",
+      "bytes": 1136698,
+      "member": "test/14348895125714870649.wav"
+    },
+    "14540129547604519203.wav": {
+      "sha256": "387013dd857edaaab667227f6dac473341fb85e9e42472ade39ea91a394dce4e",
+      "bytes": 737338,
+      "member": "test/14540129547604519203.wav"
+    },
+    "14878083544049672174.wav": {
+      "sha256": "6e6e34a4a43c27d2eae908d27f7f0478dae0319d040fae914eac20a43815a144",
+      "bytes": 917818,
+      "member": "test/14878083544049672174.wav"
+    },
+    "16058710094189854539.wav": {
+      "sha256": "5038e23fee91991e5feccee1084321261ac3c74cc9be63038c589f7bb605dffa",
+      "bytes": 606778,
+      "member": "test/16058710094189854539.wav"
+    },
+    "16135406137969315305.wav": {
+      "sha256": "81b94eb6485fee9ca0404d99b9342d4e9b92dd952192ba3f1801123202ec8124",
+      "bytes": 768058,
+      "member": "test/16135406137969315305.wav"
+    },
+    "16363899699243522172.wav": {
+      "sha256": "6a7b32e5374febfab4fe0d0d938cc03e7f9599a42f6159dc8a41057541a81bdd",
+      "bytes": 814138,
+      "member": "test/16363899699243522172.wav"
+    },
+    "16644518222137993170.wav": {
+      "sha256": "45a0310b9b19666f37dc1788bda6fee3e5aa0c1e799cebe9e9c87f58a0d6a7b2",
+      "bytes": 599098,
+      "member": "test/16644518222137993170.wav"
+    },
+    "17356681289057930157.wav": {
+      "sha256": "24d7869d76418478da2d01e73fd62b5dc41110c437be8cf7dbd094b7befbc9cb",
+      "bytes": 756538,
+      "member": "test/17356681289057930157.wav"
+    },
+    "2185735266707508578.wav": {
+      "sha256": "c49779a00fa6e826d8514d2401c292c5d9e0dd518ee1f11830d0bc89080c132c",
+      "bytes": 460858,
+      "member": "test/2185735266707508578.wav"
+    },
+    "2442077088303431914.wav": {
+      "sha256": "c1fac65101489e0ed68f75628f1891c994735b516368c0ae94e173b66786147d",
+      "bytes": 756538,
+      "member": "test/2442077088303431914.wav"
+    },
+    "2550133860513255373.wav": {
+      "sha256": "54a61ef12a49f86bd2b0e3b1b506cd2ad18357900b584c27b59b31f64740a125",
+      "bytes": 499258,
+      "member": "test/2550133860513255373.wav"
+    },
+    "3565117049425388243.wav": {
+      "sha256": "b11ebfdedf969b054a7b13fd18706004510d0cbb1892cec8c8dd23876be04eba",
+      "bytes": 410938,
+      "member": "test/3565117049425388243.wav"
+    },
+    "3598665689422649485.wav": {
+      "sha256": "0cabb8a06911ae0b402b62b2f4e4955f08eda7df37be09f7cce1197b9b0349a7",
+      "bytes": 353338,
+      "member": "test/3598665689422649485.wav"
+    },
+    "3851184196755403550.wav": {
+      "sha256": "73d1a1bfe90df554bc41f309c05bb8765d9cb72582d75dfcb22c326b44b527dd",
+      "bytes": 856378,
+      "member": "test/3851184196755403550.wav"
+    },
+    "4226771475577503451.wav": {
+      "sha256": "198172d7e63fef04b9bcf845fa98feb0dbe4b500e336c8908ab41fc3ab8044ca",
+      "bytes": 407098,
+      "member": "test/4226771475577503451.wav"
+    },
+    "432627388079085935.wav": {
+      "sha256": "da8fe78f2cabb686b2945744101ec8c5ee4af074927e550932eb254747ebecbf",
+      "bytes": 737338,
+      "member": "test/432627388079085935.wav"
+    },
+    "4572427688458300889.wav": {
+      "sha256": "b21ab5a5159c59557151f7c9680ffb1f797009b7e68b9a69ee216cb06eb6602a",
+      "bytes": 307258,
+      "member": "test/4572427688458300889.wav"
+    },
+    "4656961419508518690.wav": {
+      "sha256": "50881e906cc73df827880ccf6777a4bdbfb3678ed70cbfec1390d49664ecac72",
+      "bytes": 660538,
+      "member": "test/4656961419508518690.wav"
+    },
+    "5006611904539449806.wav": {
+      "sha256": "7e1e7fde2ad404504ac5a17580b74318b1119e6ef24651bf0309153d4e3362da",
+      "bytes": 614458,
+      "member": "test/5006611904539449806.wav"
+    },
+    "5566317317232777821.wav": {
+      "sha256": "01467ab97fc027e5683e8152187457b3dfafa4a4913fc32eb91863127e317792",
+      "bytes": 556858,
+      "member": "test/5566317317232777821.wav"
+    },
+    "5576235350170118390.wav": {
+      "sha256": "75ad15dbb52247e4de53167f34d7411babc6abb90b817f8bac0c3f34d7149d7d",
+      "bytes": 637498,
+      "member": "test/5576235350170118390.wav"
+    },
+    "5655563442639696119.wav": {
+      "sha256": "0d6882551c6bcdd364c7aaf812610d3fe0a17ab51f6431255db6769128cbce31",
+      "bytes": 468538,
+      "member": "test/5655563442639696119.wav"
+    },
+    "5831084096944162011.wav": {
+      "sha256": "ba604400f502083d19149aa0ef0f3ee03eb4a732829e2f6b7bed00695bcca993",
+      "bytes": 457018,
+      "member": "test/5831084096944162011.wav"
+    },
+    "6350573990637191461.wav": {
+      "sha256": "6faacac363fecc90b0fe59f3880be9d1918335d4eab3b0c1bff77c3e74bf6ce3",
+      "bytes": 887098,
+      "member": "test/6350573990637191461.wav"
+    },
+    "70025853428893411.wav": {
+      "sha256": "08a98d8df03f05986e4d8d4f8c25e6586a105944312f5268a091c08875a59adc",
+      "bytes": 748858,
+      "member": "test/70025853428893411.wav"
+    },
+    "7625516577244837392.wav": {
+      "sha256": "636249a5db1a728baf6c5dd2389c607a9add0309757bb02d50867e761c7f25aa",
+      "bytes": 741178,
+      "member": "test/7625516577244837392.wav"
+    },
+    "796744033896621691.wav": {
+      "sha256": "8792662e4d0529a3e1f978324323f7cbc732c759be765077442e7ce37459df00",
+      "bytes": 553018,
+      "member": "test/796744033896621691.wav"
+    },
+    "8242393670634015978.wav": {
+      "sha256": "abc7e7db1e5fe2234e04996fe9116148145c4b90e0b63de0ccdb4d42accef0c9",
+      "bytes": 556858,
+      "member": "test/8242393670634015978.wav"
+    },
+    "854024349176703150.wav": {
+      "sha256": "34adc183aa8ac3adb37612eb9d8c61c9d8daae3cf9a9f9fad74fc3737cdf6b69",
+      "bytes": 783418,
+      "member": "test/854024349176703150.wav"
+    },
+    "9235247672928100403.wav": {
+      "sha256": "5ecc6b67c325299152a3444329403f852fcdd734d370500682f744f3d114d932",
+      "bytes": 614458,
+      "member": "test/9235247672928100403.wav"
+    }
+  },
+  "selection_seeds": [
+    20261118,
+    20261119
+  ],
+  "extended_from_samples": 20
+}
