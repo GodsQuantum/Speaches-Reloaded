@@ -1,6 +1,7 @@
 """Cloud9 native CTC regression: reject ungrounded timings and preserve Han tokens."""
 
 import json
+from pathlib import Path
 
 import pytest
 
@@ -28,6 +29,66 @@ def test_mismatched_transcript_rejected() -> None:
 def test_hyphen_preserves_measured_start_end() -> None:
     raw = [{"word": "Tais-", "start": 0.10, "end": 0.36}, {"word": "toi", "start": 0.38, "end": 0.72}]
     assert restore_original_tokens(raw, "Tais-toi") == [{"word": "Tais-toi", "start": 0.10, "end": 0.72}]
+
+
+def test_float32_wav_is_losslessly_timed_as_pcm16(tmp_path: Path) -> None:
+    """One valid input frame must remain one acoustic frame after conversion."""
+    import numpy as np
+    import soundfile as sf
+
+    from speaches.executors.cloud9_ctc import pcm16_wave
+
+    original = tmp_path / "float32.wav"
+    samples = np.linspace(-0.8, 0.8, 16000, dtype=np.float32)
+    sf.write(str(original), samples, 16000, subtype="FLOAT")
+    with pcm16_wave(original) as reader:
+        assert reader.getframerate() == 16000
+        assert reader.getnchannels() == 1
+        assert reader.getsampwidth() == 2
+        assert reader.getnframes() == 16000
+        assert len(reader.readframes(16000)) == 32000
+
+
+def test_pcm16_input_retains_existing_wave_path(tmp_path: Path) -> None:
+    import wave
+
+    from speaches.executors.cloud9_ctc import pcm16_wave
+
+    path = tmp_path / "pcm16.wav"
+    with wave.open(str(path), "wb") as f:
+        f.setnchannels(1)
+        f.setsampwidth(2)
+        f.setframerate(16000)
+        f.writeframes(b"\x00\x00" * 16000)
+    with pcm16_wave(path) as reader:
+        assert reader.getnframes() == 16000
+        assert reader.readframes(1) == b"\x00\x00"
+
+
+def test_trailing_closing_guillemet_is_not_a_spoken_word() -> None:
+    raw = [
+        {"word": "Bonjour", "start": 0.1, "end": 0.5},
+        {"word": "»", "start": 0.51, "end": 0.75},
+    ]
+    assert restore_original_tokens(raw, "Bonjour»") == [{"word": "Bonjour»", "start": 0.1, "end": 0.5}]
+
+
+def test_trailing_real_word_still_rejected() -> None:
+    raw = [
+        {"word": "Bonjour", "start": 0.1, "end": 0.5},
+        {"word": "encore", "start": 0.51, "end": 0.75},
+    ]
+    with pytest.raises(ValueError, match="extra words"):
+        restore_original_tokens(raw, "Bonjour")
+
+
+def test_trailing_nonpunctuation_mark_still_rejected() -> None:
+    raw = [
+        {"word": "Bonjour", "start": 0.1, "end": 0.5},
+        {"word": " ", "start": 0.51, "end": 0.75},
+    ]
+    with pytest.raises(ValueError, match="extra words"):
+        restore_original_tokens(raw, "Bonjour")
 
 
 def test_missing_acoustic_word_must_fail() -> None:

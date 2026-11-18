@@ -1,0 +1,48 @@
+{
+  "dataset": "google/fleurs",
+  "source_commit": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "selection_seeds": [
+    20261118,
+    20261119
+  ],
+  "samples": 60,
+  "official_audio_seconds": 594.72,
+  "reference_words": 1531,
+  "text_quality": {
+    "parakeet": {
+      "errors": 80,
+      "wer_pct": 5.225342913128674
+    },
+    "whisper_ct2": {
+      "errors": 82,
+      "wer_pct": 5.355976485956891
+    },
+    "delta_whisper_minus_parakeet_pct": 0.13063357282821686,
+    "paired_bootstrap_95ci_delta_pct": [
+      -1.601,
+      1.597
+    ],
+    "parakeet_better_clips": 16,
+    "ct2_better_clips": 10,
+    "ties": 34
+  },
+  "timing": {
+    "parakeet_word_timestamps_ok": 60,
+    "ct2_word_timestamps_ok": 59,
+    "ct2_forced_alignment_failures": 1,
+    "paired59_parakeet_wall_s": 69.429,
+    "paired59_ct2_wall_s": 575.511,
+    "paired59_speed_ratio_ct2_to_para": 8.289201918506675
+  },
+  "failure": {
+    "filename": "6350573990637191461.wav",
+    "sentence_id": "1960",
+    "input_wav_format": "float32",
+    "text_only_ct2_http": 200,
+    "strict_timestamp_ct2_http": 503,
+    "direct_ctc_error": "CTC returned extra words",
+    "ctc_extra_token": "»",
+    "patch_test": "sandbox_passed_not_deployed"
+  },
+  "method": "NFKC lowercase, preserve apostrophes/hyphens, Unicode-word-token Levenshtein, bootstrap resampling paired 60 recordings seed 20261118"
+}

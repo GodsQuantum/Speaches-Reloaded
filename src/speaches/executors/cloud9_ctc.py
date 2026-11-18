@@ -8,6 +8,7 @@ word boundaries, inferred backend availability or automatic timestamp fallback.
 from __future__ import annotations
 
 import asyncio
+from contextlib import contextmanager
 import json
 import math
 import os
@@ -17,11 +18,15 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from typing import Annotated
+from typing import TYPE_CHECKING, Annotated
 import unicodedata
 import wave
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+import soundfile as sf
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 try:
     from speaches.executors.cloud9_alignment_groups import groups_for_alignment
@@ -214,12 +219,52 @@ def restore_original_tokens(raw: list[dict], text: str) -> list[dict]:
             raise ValueError("Nonfinite or empty acoustic boundaries")
         aligned.append({"word": token, "start": start, "end": end})
     if i != len(raw):
-        raise ValueError("CTC returned extra words")
+        # Some CrispASR versions expose a closing quote as a separate final
+        # span. It is punctuation, not a spoken word: do not invent a timestamp
+        # for it or reject the fully measured lexical spans.
+        trailing = [str(span.get("word", "")).strip() for span in raw[i:]]
+        if any(
+            not mark or normalized(mark) or not all(unicodedata.category(ch).startswith("P") for ch in mark)
+            for mark in trailing
+        ):
+            raise ValueError("CTC returned extra words")
     return aligned
 
 
+@contextmanager
+def pcm16_wave(wav_path: Path) -> Iterator[wave.Wave_read]:
+    """Read native PCM16 WAV unchanged; normalize float32 WAV without resampling.
+
+    Python's wave module rejects valid IEEE-float WAV (format code 3). Keep
+    a bounded temporary PCM16 conversion for the acoustic CTC subprocess,
+    while preserving all original sample positions and strict timestamps.
+    """
+    try:
+        with wave.open(str(wav_path), "rb") as reader:
+            yield reader
+    except wave.Error as exc:
+        if "unknown format: 3" not in str(exc):
+            raise
+        with sf.SoundFile(str(wav_path)) as float_reader:
+            if float_reader.samplerate != 16000 or float_reader.channels != 1:
+                raise ValueError("Expected 16kHz mono WAV") from exc
+            with tempfile.TemporaryDirectory(prefix="cloud9-ctc-input-") as tmpdir:
+                converted = Path(tmpdir) / "pcm16.wav"
+                with wave.open(str(converted), "wb") as target:
+                    target.setnchannels(1)
+                    target.setsampwidth(2)
+                    target.setframerate(16000)
+                    while True:
+                        samples = float_reader.read(65536, dtype="int16")
+                        if not len(samples):
+                            break
+                        target.writeframes(samples.astype("<i2", copy=False).tobytes())
+                with wave.open(str(converted), "rb") as reader:
+                    yield reader
+
+
 def run_alignment(wav_path: Path, text: str, language: str, model: str | None, segment_json: str | None) -> dict:
-    with wave.open(str(wav_path), "rb") as f:
+    with pcm16_wave(wav_path) as f:
         if f.getnchannels() != 1 or f.getframerate() != 16000 or f.getsampwidth() != 2:
             raise ValueError("Expected 16kHz mono signed PCM16 WAV")
         duration = f.getnframes() / 16000
